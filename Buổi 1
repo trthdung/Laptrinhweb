@@ -1,1 +1,215 @@
+<?php
+$name = "Trần Thùy Dung";
+$student_id = "224001779";
+$class = "CNTT D2024A";
+
+$bio = "Mình là Trần Thùy Dung, hiện đang là sinh viên ngành Công nghệ Thông tin. Mình yêu thích thiết kế website, lập trình và luôn muốn học hỏi thêm những kiến thức mới để nâng cao kỹ năng của bản thân.";
+
+$projects = [
+    [
+        "name" => "Hệ thống đặt lịch tư vấn",
+        "tech" => "PHP • MySQL • HTML • CSS"
+    ],
+    [
+        "name" => "Website quản lý kho hàng",
+        "tech" => "PHP • MySQL • JavaScript"
+    ],
+    [
+        "name" => "Website giới thiệu cá nhân",
+        "tech" => "HTML • CSS • PHP"
+    ]
+];
+?>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title><?php echo $name; ?> | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff1f6;
+    color: #493846;
+}
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: 50px auto;
+}
+
+.intro {
+    text-align: center;
+    padding: 45px 20px;
+    background: linear-gradient(135deg, #f6a6c8, #dba8ed);
+    color: white;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 25px rgba(220, 140, 180, 0.2);
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    margin: auto auto 15px;
+    border-radius: 50%;
+    background: white;
+    color: #d477a5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.intro h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.intro p {
+    opacity: .95;
+}
+
+.info {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 18px rgba(210, 140, 170, 0.08);
+}
+
+.info p {
+    margin: 9px 0;
+}
+
+.info strong {
+    color: #d477a5;
+}
+
+/* GIỚI THIỆU */
+.about {
+    line-height: 1.7;
+    margin-top: 15px;
+    color: #6b5865;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #c76698;
+}
+
+/* DỰ ÁN */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    border: 1px solid #f5d9e6;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(215, 120, 165, 0.18);
+}
+
+.card h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: #8e526f;
+}
+
+.tech {
+    color: #d477a5;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="intro">
+
+        <div class="avatar">TD</div>
+
+        <h1><?php echo $name; ?></h1>
+
+        <p>Sinh viên Công nghệ Thông tin • Web Developer</p>
+
+    </div>
+
+    <div class="info">
+
+        <p>
+            <strong>Mã sinh viên:</strong>
+            <?php echo $student_id; ?>
+        </p>
+
+        <p>
+            <strong>Lớp:</strong>
+            <?php echo $class; ?>
+        </p>
+
+        <p>
+            <strong>Kỹ năng:</strong>
+            HTML, CSS, JavaScript, PHP, MySQL
+        </p>
+
+        <p class="about">
+            <?php echo $bio; ?>
+        </p>
+
+    </div>
+
+    <h2>🌷 Dự án của tôi</h2>
+
+    <div class="projects">
+
+        <?php foreach ($projects as $project): ?>
+
+            <div class="card">
+
+                <h3>
+                    <?php echo $project["name"]; ?>
+                </h3>
+
+                <div class="tech">
+                    <?php echo $project["tech"]; ?>
+                </div>
+
+            </div>
+
+        <?php endforeach; ?>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+
 
