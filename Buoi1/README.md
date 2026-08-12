@@ -35,5 +35,3 @@ personal-website/
 - Xây dựng một trang Portfolio cá nhân đơn giản.
 
 
-**Bài tập nhóm của nhóm 3:** https://github.com/Tanh-Mun/project-nhom
-# Laptrinhweb
