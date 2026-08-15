@@ -389,7 +389,7 @@ tr:hover {
 <div class="box">
 
 <h2>
-    3. Đặt lịch
+     Đặt lịch
 </h2>
 
 
@@ -516,7 +516,7 @@ tr:hover {
 <div class="box">
 
 <h2>
-    4. Lịch của sinh viên
+     Lịch của sinh viên
 </h2>
 
 
